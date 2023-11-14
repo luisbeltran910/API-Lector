@@ -1,0 +1,22 @@
+<div class="banner">
+<div class="container">
+    <h2>Todos Los Posts Del API</h2>
+    
+    <table class="table table-bordered">
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+        </tr>
+        <tr *ngFor="let getdata of getdata">
+            <td><a [routerLink]="['/comment', getdata.userId]">{{ getdata.userId }}</a></td>
+            <td>{{ getdata.id }}</td>
+            <td>
+                <a [routerLink]="['/post', getdata.id]">{{ getdata.title }}</a>
+            </td>
+            <td>{{ getdata.body }}</td>
+        </tr>
+    </table>
+    </div>
+</div>

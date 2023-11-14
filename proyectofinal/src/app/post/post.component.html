@@ -1,0 +1,23 @@
+<div class="banner">
+<div class="container">
+    <h2>Un Post Del API</h2>
+    
+    <table class="table">
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        <tr>
+            <td>{{ posts.userId }}</td>
+            <td>{{ posts.id }}</td>
+            <td>{{ posts.title }}</td>
+            <td>{{ posts.body }}</td>
+        </tr>
+    </table>
+    <button class="btn btn-primary">
+        <a [routerLink]="['/comment', posts.userId]">Leer Comentarios</a>
+    </button>
+    </div>
+</div>
